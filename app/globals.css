@@ -1,27 +1,77 @@
+/* 
+ @mark imports 
+*/
+
+/* 
+ @mark root 
+*/
+:root {
+ --sz-16: 16px;
+
+ --t-000: #000;
+ --t-fff: #fff;
+
+ --b-000: #000;
+ --b-fff: #fff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+ :root {
+ }
+} */
+
+/* 
+ @mark fonts 
+ */
+/* @font-face {
+ font-family: '';
+ font-style: normal;
+ font-weight: 00;
+ font-display: swap;
+ src: url('../../fonts') format('woff2');
+} */
+
+/* 
+ @mark tailwind 
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+ ::-webkit-scrollbar-button {
+  @apply w-[6px] h-0;
+ }
+ ::-webkit-scrollbar-track {
+  @apply bg-[var(--b-fff)] shadow-[0px_0px_3px_var(--b-fff)_inset];
+ }
+ ::-webkit-scrollbar-thumb {
+  @apply rounded-[2px] bg-[var(--b-000)];
+ }
+ ::-webkit-resizer {
+  @apply w-[7px] h-0;
+ }
+ ::-webkit-scrollbar {
+  @apply w-[7px];
+ }
+ body {
+  @apply font-400 text-16 leading-n text-[var(--t-fff)] bg-[var(--b-000)];
+ }
+ body.j-lock {
+  overflow: hidden;
+ }
+ input,
+ select,
+ button,
+ textarea {
+  @apply outline-none;
+ }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@layer components {
+ .i-wrap {
+  @apply relative flex;
+ }
+ .i-full {
+  @apply absolute top-0 left-0 w-full h-full object-cover object-center;
+ }
 }
