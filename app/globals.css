@@ -13,6 +13,8 @@
 
  --b-000: #000;
  --b-fff: #fff;
+ --b-1b54dd: #1b54dd;
+ --b-e8e8e8: #e8e8e8;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -55,7 +57,7 @@
   @apply w-[7px];
  }
  body {
-  @apply font-400 text-16 leading-n text-[var(--t-fff)] bg-[var(--b-000)];
+  @apply font-400 text-16 leading-n text-[var(--t-000)] bg-[var(--b-fff)];
  }
  body.j-lock {
   overflow: hidden;

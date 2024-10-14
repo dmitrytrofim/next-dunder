@@ -1,6 +1,6 @@
 function Container({
  children,
- width = 'max-w-[1200px]',
+ width = 'max-w-[500px]',
 }: {
  children: React.ReactNode;
  width?: string;

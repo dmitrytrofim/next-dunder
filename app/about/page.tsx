@@ -1,5 +1,13 @@
+import Container from '@/components/Container';
+
 function About() {
- return <h1>about2</h1>;
+ return (
+  <section className="">
+   <Container>
+    <div className="">about</div>
+   </Container>
+  </section>
+ );
 }
 
 export default About;
