@@ -2,6 +2,7 @@ import Container from '@/components/Container';
 import Image from 'next/image';
 import photo from '@/app/img/photo-main.png';
 import { getPosts } from '@/services/getPosts';
+import Link from 'next/link';
 
 async function Home() {
  const posts = await getPosts();
@@ -29,13 +30,15 @@ async function Home() {
     <Container>
      <div className="py-[20px]">
       <h2 className="text-[24px] font-700 text-center mb-[20px]">Last Posts</h2>
-      <div className="flex flex-col gap-[10px]">
+      <ul className="flex flex-col gap-[10px]">
        {lastPosts.map((post: any, id: any) => (
-        <p key={post.id}>
-         {id + 1 + '. ' + post.title[0].toUpperCase() + post.title.slice(1)}
-        </p>
+        <li key={post.id}>
+         <Link href={`/blog/${post.id}`}>
+          {id + 1 + '. ' + post.title[0].toUpperCase() + post.title.slice(1)}
+         </Link>
+        </li>
        ))}
-      </div>
+      </ul>
      </div>
     </Container>
    </section>
