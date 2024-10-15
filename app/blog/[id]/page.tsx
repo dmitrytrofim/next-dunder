@@ -25,8 +25,14 @@ async function Post({ params: { id } }: Props) {
   <div className="">
    <Container>
     <div className="leading-[1.5] py-[32px]">
-     <h1 className="text-[24px] text-center mb-[32px]">Post {post.title}</h1>
-     <p className="text-[18px]">{post.body}</p>
+     <h1 className="text-[24px] text-center mb-[32px]">
+      {post.title[0].toUpperCase()}
+      {post.title.slice(1)}
+     </h1>
+     <p className="text-[18px]">
+      {post.body[0].toUpperCase()}
+      {post.body.slice(1)}
+     </p>
     </div>
    </Container>
   </div>

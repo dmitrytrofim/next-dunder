@@ -15,9 +15,7 @@ async function Posts() {
        <li key={post.id}>
         <Link href={`/blog/${post.id}`}>{`${
          post.id
-        }. ${post.title[0].toUpperCase()}${post.title
-         .slice(1)
-         .toLowerCase()}`}</Link>
+        }. ${post.title[0].toUpperCase()}${post.title.slice(1)}`}</Link>
        </li>
       ))}
      </ul>
