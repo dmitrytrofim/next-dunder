@@ -4,7 +4,7 @@ import './globals.css';
 import Header from '../layouts/TheHeader';
 import Footer from '../layouts/TheFooter';
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
  title: 'Create Next App',

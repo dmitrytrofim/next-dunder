@@ -28,9 +28,9 @@ async function Home() {
    </section>
    <section className="">
     <Container>
-     <div className="py-[20px]">
+     <div className="flex flex-col py-[20px]">
       <h2 className="text-[24px] font-700 text-center mb-[20px]">Last Posts</h2>
-      <ul className="flex flex-col gap-[10px]">
+      <ul className="flex flex-col gap-[10px] mb-[20px]">
        {lastPosts.map((post: any, id: any) => (
         <li key={post.id}>
          <Link href={`/blog/${post.id}`}>
@@ -39,6 +39,12 @@ async function Home() {
         </li>
        ))}
       </ul>
+      <Link
+       className="self-center text-[var(--t-fff)] bg-[var(--b-1b54dd)] p-[8px_15px]"
+       href="/blog/"
+      >
+       More
+      </Link>
      </div>
     </Container>
    </section>
